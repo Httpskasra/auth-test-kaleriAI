@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function DashboardPage() {
   const { user, requireAuth } = useAuth();
-  requireAuth(); // redirects to /auth if not logged in
+  requireAuth(); // برای اینکه اگر لوکال استورج خالی بود ریدایرکت کنه
   if (!user) return null;
 
   const fullName = `${user.name.first} ${user.name.last}`;
@@ -40,8 +40,8 @@ export default function DashboardPage() {
           </div>
 
           <div className={styles.tile}>
-            <h3>نکات</h3>
-            <p>این صفحه صرفاً جهت نمایش روند ورود و ریدایرکت است.</p>
+            <h3>توسط</h3>
+            <p>کسری رحمانیان</p>
           </div>
         </div>
       </div>
