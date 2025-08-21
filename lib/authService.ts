@@ -1,3 +1,4 @@
+"use client";
 import type { RandomUser } from "@context/AuthContext";
 
 export class AuthService {

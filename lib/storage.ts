@@ -1,3 +1,4 @@
+"use client"
 export class Storage {
   static get<T = unknown>(key: string): T | null {
     if (typeof window === "undefined") return null;
