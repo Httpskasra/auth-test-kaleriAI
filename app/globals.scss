@@ -1,0 +1,56 @@
+@use "@styles/variables" as *;
+@use "@styles/animations" as *;
+@use "@styles/mixins" as *;
+
+:root {
+  --bg-dark: #0b0f1a;
+  --bg-card: #101523;
+  --text: #e9eefb;
+  --muted: #9fb0d9;
+  --primary: #6c7cff;
+  --primary-dark: #5b6aec;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #eab308;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: radial-gradient(
+      1200px 800px at 20% 10%,
+      rgba(108, 124, 255, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 700px at 80% 0%,
+      rgba(34, 197, 94, 0.12),
+      transparent 50%
+    ),
+    radial-gradient(
+      900px 700px at 50% 110%,
+      rgba(234, 179, 8, 0.12),
+      transparent 50%
+    ),
+    var(--bg-dark);
+  color: var(--text);
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}

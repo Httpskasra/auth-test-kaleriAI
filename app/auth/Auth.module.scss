@@ -1,0 +1,103 @@
+@use "@styles/variables" as *;
+
+.card {
+  width: min(520px, 94%);
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-2xl;
+  padding: 2rem;
+  box-shadow: $shadow-soft;
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.header {
+  text-align: center;
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+  }
+  p {
+    margin: 0;
+    color: var(--muted);
+  }
+}
+
+.form {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+.cta {
+  margin-top: 0.5rem;
+}
+
+.errorMsg {
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.08);
+  color: #fecaca;
+  border-radius: $radius-lg;
+  font-size: 0.9rem;
+}
+
+.footerNote {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.decorations {
+  position: absolute;
+  inset: -20vh -10vw -20vh -10vw;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.blobA,
+.blobB {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  filter: blur(60px);
+  opacity: 0.23;
+  border-radius: 50%;
+  animation: floaty 10s ease-in-out infinite;
+}
+
+.blobA {
+  background: #6c7cff;
+  top: 5%;
+  right: 10%;
+}
+.blobB {
+  background: #22c55e;
+  bottom: 0;
+  left: 8%;
+  animation-delay: 1.2s;
+}
+
+.ring {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 3s ease-out infinite;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 1.25rem;
+  }
+}

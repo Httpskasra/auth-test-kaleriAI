@@ -1,0 +1,42 @@
+@use "@styles/variables" as *;
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+.label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.input {
+  appearance: none;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: $radius-xl;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  outline: none;
+  transition: border-color $transition-base, box-shadow $transition-base,
+    transform $transition-base;
+
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(108, 124, 255, 0.12);
+    transform: translateY(-1px);
+  }
+
+  &::placeholder {
+    color: #7f8bb0;
+  }
+}
+
+.hasError {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+.error {
+  color: #fecaca;
+  font-size: 0.85rem;
+}
